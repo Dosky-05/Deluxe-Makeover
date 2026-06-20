@@ -116,6 +116,9 @@ export default function Hero() {
         </div>
       </div>
 
+      {/* Top gradient — masks video artifact on mobile */}
+      <div className="hero-top-fade" style={{ position: 'absolute', top: 0, left: 0, right: 0, zIndex: 3 }} />
+
       {/* Fade into next section */}
       <div
         style={{

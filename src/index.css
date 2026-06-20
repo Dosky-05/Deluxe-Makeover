@@ -94,6 +94,19 @@ section[id] {
   to   { opacity: 1; transform: translateX(-50%) translateY(0); }
 }
 
+/* Hero top fade — hidden on desktop, masks video artifact on mobile */
+.hero-top-fade {
+  display: none;
+  height: 0;
+}
+@media (max-width: 1023px) {
+  .hero-top-fade {
+    display: block;
+    height: 280px;
+    background: linear-gradient(to bottom, #050505 0%, #050505 30%, rgba(5,5,5,0.7) 65%, transparent 100%);
+  }
+}
+
 /* Scroll reveal */
 .reveal {
   opacity: 0;
