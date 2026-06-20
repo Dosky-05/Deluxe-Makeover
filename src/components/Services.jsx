@@ -57,7 +57,7 @@ export default function Services() {
             <div
               key={s.title}
               className="service-card"
-              style={{ position: 'relative', height: 420, background: '#0a0a0a', overflow: 'hidden', cursor: 'default' }}
+              style={{ position: 'relative', height: 420, background: '#0a0a0a', overflow: 'hidden', cursor: 'default', minWidth: 0 }}
             >
               {/* Background image */}
               <img

@@ -121,6 +121,10 @@ section[id] {
   filter: blur(0);
   opacity: 1;
 }
+/* Hide side cards on mobile — controlled via CSS, not Tailwind */
+@media (max-width: 767px) {
+  .gallery-side { display: none !important; }
+}
 
 /* Enquire button */
 .enquire-btn {
@@ -203,18 +207,37 @@ section[id] {
   opacity: 0.7;
 }
 
-/* ── Navbar display control (avoids inline style conflicts) ── */
-.nav-desktop   { display: flex !important; }
-.nav-hamburger { display: none !important; }
+/* ── Navbar display control ── */
+.nav-desktop    { display: flex !important; }
+.nav-hamburger  { display: none !important; }
 .nav-mob-drawer { display: none !important; }
 
-/* ── Mobile ── */
-@media (max-width: 767px) {
+/* ── Hamburger on tablet + mobile (< 1024px) ── */
+@media (max-width: 1023px) {
   .nav-desktop    { display: none !important; }
   .nav-hamburger  { display: flex !important; flex-direction: column; }
   .nav-mob-drawer { display: block !important; }
   .nav-bar-pad    { padding: 16px 20px !important; }
+}
 
+/* ── Tablet (768px – 1023px) ── */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .mob-px            { padding-left: 32px !important; padding-right: 32px !important; }
+  .mob-section       { padding-top: 80px !important; padding-bottom: 80px !important; }
+  .tab-about-col     { gap: 48px !important; }
+  .tab-reviews-grid  { grid-template-columns: repeat(2, 1fr) !important; }
+  .tab-contact-grid  { grid-template-columns: repeat(2, 1fr) !important; gap: 40px 24px !important; }
+  .tab-contact-grid > a:last-child { grid-column: 1 / -1; }
+  .gallery-side      { width: 150px !important; height: 220px !important; }
+  .gallery-center    { width: 260px !important; height: 360px !important; }
+  .gallery-carousel  { padding: 0 24px !important; gap: 10px !important; }
+  .mob-stack         { grid-template-columns: repeat(2, 1fr) !important; }
+  .service-card      { height: 380px !important; }
+  .lightbox-img      { width: 70vw !important; height: 55vh !important; }
+}
+
+/* ── Mobile (≤ 767px) ── */
+@media (max-width: 767px) {
   .mob-section  { padding-top: 64px !important; padding-bottom: 64px !important; }
   .mob-px       { padding-left: 20px !important; padding-right: 20px !important; }
   .mob-stack    { grid-template-columns: 1fr !important; }
@@ -223,14 +246,24 @@ section[id] {
   .mob-tips-pad { padding: 24px 20px !important; }
   .mob-contact-stack { grid-template-columns: repeat(2, 1fr) !important; gap: 36px 20px !important; }
   .mob-contact-stack > a:last-child { grid-column: 1 / -1; }
-  .footer-bar { flex-direction: column !important; align-items: center !important; text-align: center !important; padding: 20px !important; gap: 8px !important; }
-  .mob-gap-sm        { gap: 24px !important; }
-  .gallery-carousel  { padding: 0 8px !important; gap: 8px !important; }
-  .gallery-center    { width: calc(100vw - 130px) !important; height: 360px !important; }
+  .footer-bar        { flex-direction: column !important; align-items: center !important; text-align: center !important; padding: 20px !important; gap: 8px !important; }
+  .gallery-carousel  { padding: 0 8px !important; gap: 8px !important; overflow: hidden !important; }
+  .gallery-center    { width: calc(100vw - 128px) !important; height: 340px !important; }
   .mob-stats         { display: grid !important; grid-template-columns: repeat(3, 1fr) !important; gap: 12px !important; }
   .mob-btn-full      { display: block !important; width: 100% !important; text-align: center !important; box-sizing: border-box !important; }
   .lightbox-img      { width: 90vw !important; height: 44vh !important; }
   .lightbox-prev     { position: absolute !important; left: 10px !important; z-index: 10 !important; }
   .lightbox-next     { position: absolute !important; right: 10px !important; z-index: 10 !important; }
   .lightbox-content  { position: relative !important; }
+}
+
+/* ── Small phones (≤ 479px) ── */
+@media (max-width: 479px) {
+  .mob-px       { padding-left: 16px !important; padding-right: 16px !important; }
+  .mob-section  { padding-top: 52px !important; padding-bottom: 52px !important; }
+  .mob-stats    { gap: 8px !important; }
+  .gallery-center    { width: calc(100vw - 116px) !important; height: 260px !important; }
+  .gallery-carousel  { padding: 0 4px !important; gap: 4px !important; overflow: hidden !important; }
+  .lightbox-img      { width: 95vw !important; height: 38vh !important; }
+  .mob-tips-pad      { padding: 20px 16px !important; }
 }

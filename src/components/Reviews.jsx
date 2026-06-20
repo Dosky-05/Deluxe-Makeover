@@ -66,7 +66,7 @@ export default function Reviews() {
         </div>
 
         {/* Cards */}
-        <div className="mob-stack" style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 16 }}>
+        <div className="mob-stack tab-reviews-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 16 }}>
           {pages[page].map((r, i) => (
             <div
               key={`${page}-${i}`}

@@ -4,7 +4,7 @@ const ACCENT = '#E8891A'
 
 const stats = [
   { value: '200+', label: 'Happy Clients' },
-  { value: '7+',   label: 'Years Experience' },
+  { value: '7+',   label: 'Years & Experience' },
   { value: '100%', label: 'Passion & Precision' },
 ]
 
@@ -26,7 +26,7 @@ export default function About() {
   return (
     <section id="about" ref={sectionRef} className="mob-section" style={{ padding: '100px 0', background: '#050505' }}>
       <div className="mob-px" style={{ maxWidth: 1280, margin: '0 auto', padding: '0 40px' }}>
-        <div className="mob-col" style={{ display: 'flex', alignItems: 'center', gap: 80, flexWrap: 'wrap' }}>
+        <div className="mob-col tab-about-col" style={{ display: 'flex', alignItems: 'center', gap: 80, flexWrap: 'wrap' }}>
 
           {/* Image side */}
           <div className="reveal-left" style={{ flex: '1 1 300px', minWidth: 0, display: 'flex', justifyContent: 'center' }}>

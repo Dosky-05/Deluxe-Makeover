@@ -81,7 +81,7 @@ export default function Gallery() {
         <div style={{ display: 'flex', alignItems: 'center', gap: 16, overflow: 'hidden' }}>
           {/* Left blurred card */}
           <div
-            className="gallery-side hidden sm:block"
+            className="gallery-side"
             onClick={prev}
             style={{ width: 200, height: 280, flexShrink: 0, overflow: 'hidden', borderRadius: 2 }}
           >
@@ -127,7 +127,7 @@ export default function Gallery() {
 
           {/* Right blurred card */}
           <div
-            className="gallery-side hidden sm:block"
+            className="gallery-side"
             onClick={next}
             style={{ width: 200, height: 280, flexShrink: 0, overflow: 'hidden', borderRadius: 2 }}
           >

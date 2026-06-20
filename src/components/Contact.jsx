@@ -153,7 +153,7 @@ export default function Contact() {
             transitionDelay: '0.05s',
           }}
         >
-          Let&apos;s make you beautiful
+          Let&apos;s make you more beautiful
         </h2>
         <p
           className="reveal"
@@ -194,7 +194,7 @@ export default function Contact() {
         </div>
 
         {/* Contact icons */}
-        <div className="mob-contact-stack" style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 32 }}>
+        <div className="mob-contact-stack tab-contact-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 32 }}>
           {contacts.map((c, i) => {
             if (c.id === 'call') {
               return (
