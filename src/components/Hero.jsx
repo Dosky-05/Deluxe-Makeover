@@ -16,21 +16,23 @@ export default function Hero() {
         justifyContent: 'center',
       }}
     >
-      {/* Background image */}
-      <img
-        src="/Heroimg2.jpg"
-        alt=""
+      {/* Background video */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
         style={{
           position: 'absolute',
           inset: 0,
           width: '100%',
           height: '100%',
           objectFit: 'cover',
-          objectPosition: 'center center',
-          animation: 'kenburns 14s ease-in-out infinite',
-          transformOrigin: 'center center',
+          objectPosition: '50% 30%',
         }}
-      />
+      >
+        <source src="/HeroBgpic_clean.mp4" type="video/mp4" />
+      </video>
 
       {/* Overlay for text readability */}
       <div
