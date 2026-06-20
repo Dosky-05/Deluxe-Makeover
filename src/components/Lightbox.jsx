@@ -3,15 +3,16 @@ import { useState, useEffect } from 'react'
 const ACCENT = '#E8891A'
 
 export const allImages = [
-  { img: '/BridalGlow.jpg',      label: 'The Bridal Glow',   sub: 'Bridal Makeup' },
-  { img: '/Cleanglam.jpg',       label: 'Clean Glam',         sub: 'Evening Look' },
-  { img: '/NaturalElegance.jpg', label: 'Neutral Elegance',   sub: 'Neutral Glam' },
-  { img: '/SkinFocus.jpg',       label: 'Skin Focus',         sub: 'Natural Look' },
-  { img: '/Bold&Beautiful.jpg',  label: 'Bold & Beautiful',   sub: 'Editorial' },
-  { img: '/Goldenhour.jpg',      label: 'Golden Hour',        sub: 'Special Occasion' },
-  { img: '/Artistimg.jpg',       label: 'The Artist',         sub: 'Portrait' },
-  { img: '/Heroimg.jpg',         label: 'Beauty Tools',       sub: 'Studio' },
-  { img: '/Heroimg2.jpg',        label: 'The Collection',     sub: 'Studio' },
+  { img: '/Gallery01.jpg',      label: 'The Bridal Glow',   sub: 'Bridal Makeup' },
+  { img: '/Gallery02.jpg',      label: 'Clean Glam',        sub: 'Evening Look' },
+  { img: '/Gallery03.jpg',      label: 'Neutral Elegance',  sub: 'Neutral Glam' },
+  { img: '/Gallery04.jpg',      label: 'Skin Focus',        sub: 'Natural Look' },
+  { img: '/Gallery05.jpg',      label: 'Bold & Beautiful',  sub: 'Editorial' },
+  { img: '/Gallery06.jpg',      label: 'Golden Hour',       sub: 'Special Occasion' },
+  { img: '/Bridal-makeup.jpg',  label: 'Bridal Makeup',     sub: 'Bridal' },
+  { img: '/Clean-Glam.jpg',     label: 'Clean Glam',        sub: 'Evening Look' },
+  { img: '/Neutural-Glam.jpg',  label: 'Neutral Glam',      sub: 'Neutral Glam' },
+  { img: '/Skin-focused.jpg',   label: 'Skin Focused',      sub: 'Natural Look' },
 ]
 
 export default function Lightbox({ startIndex = 0, onClose }) {

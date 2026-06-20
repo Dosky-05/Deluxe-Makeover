@@ -4,12 +4,12 @@ import Lightbox from './Lightbox'
 const ACCENT = '#E8891A'
 
 const items = [
-  { label: 'The Bridal Glow', sub: 'Bridal Makeup', img: '/BridalGlow.jpg' },
-  { label: 'Clean Glam', sub: 'Evening Look', img: '/Cleanglam.jpg' },
-  { label: 'Neutral Elegance', sub: 'Neutral Glam', img: '/NaturalElegance.jpg' },
-  { label: 'Skin Focus', sub: 'Natural Look', img: '/SkinFocus.jpg' },
-  { label: 'Bold & Beautiful', sub: 'Editorial', img: '/Bold&Beautiful.jpg' },
-  { label: 'Golden Hour', sub: 'Special Occasion', img: '/Goldenhour.jpg' },
+  { label: 'The Bridal Glow', sub: 'Bridal Makeup', img: '/Gallery01.jpg' },
+  { label: 'Clean Glam', sub: 'Evening Look', img: '/Gallery02.jpg' },
+  { label: 'Neutral Elegance', sub: 'Neutral Glam', img: '/Gallery03.jpg' },
+  { label: 'Skin Focus', sub: 'Natural Look', img: '/Gallery04.jpg' },
+  { label: 'Bold & Beautiful', sub: 'Editorial', img: '/Gallery05.jpg' },
+  { label: 'Golden Hour', sub: 'Special Occasion', img: '/Gallery06.jpg' },
 ]
 
 const ArrowBtn = ({ onClick, dir }) => {
