@@ -83,7 +83,7 @@ export default function Lightbox({ startIndex = 0, onClose }) {
         </button>
 
         {/* Image */}
-        <div style={{ position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 16 }}>
+        <div style={{ position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
           <div className="lightbox-img">
             <img
               key={cur}
@@ -91,14 +91,6 @@ export default function Lightbox({ startIndex = 0, onClose }) {
               alt={allImages[cur].label}
               style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top', display: 'block', animation: slideAnim }}
             />
-          </div>
-          <div style={{ textAlign: 'center', animation: 'galleryLabelIn 0.6s ease 0.25s both' }}>
-            <p style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: '1.4rem', fontWeight: 300, color: '#fff', marginBottom: 4 }}>
-              {allImages[cur].label}
-            </p>
-            <p style={{ fontSize: 10, letterSpacing: '0.3em', textTransform: 'uppercase', color: ACCENT, fontWeight: 500 }}>
-              {allImages[cur].sub}
-            </p>
           </div>
         </div>
 

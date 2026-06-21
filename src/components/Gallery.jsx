@@ -120,8 +120,13 @@ export default function Gallery() {
               </p>
             </div>
             {/* View all hint */}
-            <div style={{ position: 'absolute', top: 16, right: 16, background: 'rgba(0,0,0,0.55)', border: '1px solid rgba(255,255,255,0.15)', padding: '6px 12px', backdropFilter: 'blur(4px)' }}>
-              <p style={{ fontSize: 9, letterSpacing: '0.2em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.7)', fontWeight: 400 }}>View All</p>
+            <div
+              className="gallery-view-all"
+              style={{ position: 'absolute', top: 16, right: 16, background: 'rgba(0,0,0,0.55)', border: '1px solid rgba(255,255,255,0.15)', padding: '6px 12px', backdropFilter: 'blur(4px)', transition: 'background 0.25s, border-color 0.25s' }}
+              onMouseEnter={e => { e.currentTarget.style.background = ACCENT; e.currentTarget.style.borderColor = ACCENT }}
+              onMouseLeave={e => { e.currentTarget.style.background = 'rgba(0,0,0,0.55)'; e.currentTarget.style.borderColor = 'rgba(255,255,255,0.15)' }}
+            >
+              <p style={{ fontSize: 9, letterSpacing: '0.2em', textTransform: 'uppercase', color: '#fff', fontWeight: 400 }}>View All</p>
             </div>
           </div>
 

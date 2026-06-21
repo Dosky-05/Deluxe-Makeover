@@ -95,8 +95,8 @@ export default function About() {
                 cursor: 'pointer',
                 transitionDelay: '0.65s',
               }}
-              onMouseEnter={e => { e.currentTarget.style.background = ACCENT; e.currentTarget.style.color = '#fff' }}
-              onMouseLeave={e => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = ACCENT }}
+              onMouseEnter={e => { e.currentTarget.style.transitionDelay = '0s'; e.currentTarget.style.background = ACCENT; e.currentTarget.style.color = '#fff' }}
+              onMouseLeave={e => { e.currentTarget.style.transitionDelay = '0s'; e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = ACCENT }}
             >
               Book a Session
             </a>
