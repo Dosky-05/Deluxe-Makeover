@@ -36,14 +36,14 @@ export default function Reviews() {
     clearInterval(timerRef.current)
     timerRef.current = setInterval(() => {
       setPage(p => (p + 1) % pages.length)
-    }, 4000)
+    }, 6000)
   }
 
   useEffect(() => {
     if (!paused) {
       timerRef.current = setInterval(() => {
         setPage(p => (p + 1) % pages.length)
-      }, 4000)
+      }, 6000)
     }
     return () => clearInterval(timerRef.current)
   }, [paused])
@@ -129,7 +129,7 @@ export default function Reviews() {
                 left: 0, top: 0, height: '100%',
                 background: ACCENT,
                 width: paused ? '0%' : '100%',
-                transition: paused ? 'none' : 'width 4s linear',
+                transition: paused ? 'none' : 'width 6s linear',
               }}
             />
           </div>
